@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Love Calculator</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="author" content="Pleasedontforgetmypassword">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A love calculator for your needs!">
+        <meta name="keywords" content="Love, Calculator, Pleasedontforgetmypassword, Website, Chances, Crush, School, Romance">
+    </head>
+    <body>
+        <div class="Header">
+            <h1>Love Calculator</h1>
+        </div>
+        <div class="Main">
+            <div class="Container">
+                <div class="Side" id="left">
+                    <form id="Left-wing">
+                        <label for="Name">Name (Required)</label><br>
+                        <textarea required placeholder="Name of Person 1" type="text" id="Name-1" min="1"></textarea><br>
+                        <label for="Desc">Description (Optional)</label><br>
+                        <textarea placeholder="Description of Person 1" type="text" id="Desc"></textarea>
+                    </form>
+                </div>            
+                <div class="Middle">
+                    <div class="Top">
+                        <div class="Results">
+                            <h2>Love Chance</h2>
+                            <span id="Rate">0.00%</span>
+                        </div>
+                    </div>
+                    <div class="Image">
+                        <img src="./Heart.png" height="200px" width="200px" alt="A Love Heart png.">
+                    </div>
+                    <div class="Bottom">
+                        <button type="button" name="Calc" id="Calc" onclick="Click()">Calculate</button>
+                    </div>
+                </div>
+                <div class="Side" id="right">
+                    <form id="right-wing">
+                         <label for="Name">Name (Required)</label><br>
+                        <textarea required placeholder="Name of Person 2" type="text" id="Name-2" min="1"></textarea><br>
+                        <label for="Desc">Description (Optional)</label><br>
+                        <textarea required placeholder="Description of Person 2" type="text" id="Desc"></textarea> 
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="Footer-box">
+                <div class="media">
+                    <a href="https://github.com/Pleasedontforgetmypassword" target="blank_"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Store Names and values
+            const Matches = {}
+            // Function  for calculating
+            const Cal = (Name1, Name2) =>{
+                // Check if both contain anything
+                if (Name1 && Name2){
+                    // Return a random number
+                    return (Math.random() * 100).toFixed(2) + "%"
+                }else{
+                    // If Both Names are empty then return 0
+                    return "0.00%"
+                }
+            }
+            
+            const Click = () => {
+                // On click create an array with both names
+                let Names = [document.getElementById("Name-1").value.toLowerCase(), document.getElementById("Name-2").value.toLowerCase()]
+                // Get the love chance
+                let Value = Cal(Names[0], Names[1])
+                // Check if the names have been previously matched
+                if (Names in Matches){
+                    // If theyre a previous match then return the value
+                    Value = Matches[Names]
+                }else{
+                    // Create a new match
+                    Matches[Names] = Value
+                }
+                document.getElementById("Rate").innerHTML = Value
+
+            }
+        </script>
+    </body>
+</html>

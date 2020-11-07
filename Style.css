@@ -1,0 +1,151 @@
+html, body {
+    height: 100%;
+}
+.Header {
+    top: 0;
+    height: 125px;
+    width: 100%;
+    background-color: 	#383838;
+    text-align: center;
+    
+}
+.Footer {
+    position: relative;
+    display: flex;
+    height: 150px;
+    width: 100%;
+    background-color: 	#383838;
+    bottom: 0;
+}
+.Header h1 {
+    font-family: 'Times New Roman';
+    color:	#A9A9A9;
+    font-size: 5em;
+    text-align: bottom;
+    display: inline;
+}
+.Main {
+    display: flex;
+    background-image: linear-gradient(to bottom, #ff9966 0%, #ff99ff 100%);
+    height: 100%;
+    width: 100%;
+}
+.Container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1440px;
+    height: 720px;
+}
+.Side {
+    width: 35%;
+    height: 100%;
+    text-align: center;
+}
+#right {
+    float: right;
+}
+#left {
+    float: left;
+}
+.Middle {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    position: relative;
+    float: left;
+
+}
+.Side label {
+    font-size: 3em;
+    color: 	#282828;
+}
+.Side textarea {
+    resize: none;
+}
+.Side #Name-1 {
+    width: 404px;
+    height: 100px;
+    font-size: 25px;
+}
+.Side #Name-2 {
+    width: 404px;
+    height: 100px;
+    font-size: 25px;
+}
+.Side #Desc {
+    width: 404px;
+    height: 450px;
+    font-size: 25px;
+}
+.Middle .Bottom {
+
+    width: 100%;
+    position: absolute;
+    height: 250px;
+    bottom: 0;
+}
+.Middle .Top {
+
+    width: 100%;
+    position: absolute;
+    height: 300px;
+    top: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+.Middle .Bottom #Calc {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 200px;
+    color: 	#383838;
+    font-size: 35px;
+}
+.Middle .Top h2 {
+    font-size: 3em;
+}
+.Middle .Top #Rate {
+    font-size: 2em;
+    padding: 40px;
+}
+.Image {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Footer-box {
+    height: 110px;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+
+}
+.media {
+    height: 110px;
+    width: 110px;
+    background-color: 	#101010;
+    box-shadow: 5px 5px 5px;
+    float: left;
+    position: relative;
+}
+.media .fa {
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 100px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+}
